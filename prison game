@@ -1,0 +1,82 @@
+import random
+import os
+
+
+def dmg_chance(dmg):
+    chance = random.range(1, 11)
+    if chance == range(1, 8):
+        hit = True
+
+
+def skip():
+    skip_button = input(r'Press "ENTER" to continue')
+
+
+def cls():
+    os.system('cls')
+
+
+def player_answer(player_choice, Ysit, Nsit):
+    if player_choice is 'y' or 'Y':
+        print(Ysit)
+    elif player_choice is 'n' or 'N':
+        print(Nsit)
+    else:
+        print('Wrong input')
+
+game = True
+player_hp = 100
+player_strength = 0
+player_agility = 0
+player_intelligence = 0
+hit = False
+days = 0
+cls()
+print('"Judge" Order in the courtroom!!')
+skip()
+cls()
+name = input('"Judge" Who do we got here? >>> ')
+cls()
+print('"Judge" Hmm robbery and murder i see, i sentence you to 10 years in Lawson Correctional facility')
+skip()
+cls()
+
+print('"Guard" This is your cell inmate *Cell open* Would you like to enter? y/n')
+player_choice = input()
+
+if player_choice == 'n' or player_choice == 'N':
+    print('*Guard smacks you right in the back and pushes you in -20 hp*')
+    skip()
+    player_hp = player_hp - 20
+    cls()
+elif player_choice == 'y' or player_choice is 'Y':
+    print('*You take a step into your cell*')
+    skip()
+    cls()
+
+else:
+    print('Invalid input')
+
+print('"Cell mate" Hey pal my name is Tyler, im your cellmate,'
+      ' if yo just jerk off to the wall and make no trouble we be all good')
+skip()
+cls()
+player_choice = input('Ask Tyler about life in prison? y/n >>> ')
+if player_choice is 'y' or player_choice is 'Y':
+    cls()
+    print('"Tyler" In prison its all about ur respect and money, if you got both, none will touch u.\nKilling shit'
+          'is a necessity in prison, kill or get killed')
+    skip()
+    cls()
+if player_choice is 'n' or player_choice is 'N':
+    cls()
+
+
+while game is True:
+    print("Where would you like to go?\nStash\nBed\nYard\n")
+
+
+
+
+
+
